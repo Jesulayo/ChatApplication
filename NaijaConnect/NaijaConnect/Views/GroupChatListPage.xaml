@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NaijaConnect.Views.GroupChatListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:NaijaConnect.Components"
+    xmlns:model="clr-namespace:NaijaConnect.Models"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.HasBackButton="False">
+
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource LightGreen}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <Grid Margin="0,0,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+
+            <Frame
+                Grid.Column="0"
+                Padding="0"
+                CornerRadius="25"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                IsClippedToBounds="True"
+                VerticalOptions="Center"
+                WidthRequest="50">
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{Binding Avatar}"
+                    VerticalOptions="Center" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateProfileCommand}" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Label
+                Grid.Column="1"
+                Padding="20,0,0,0"
+                HorizontalOptions="Start"
+                Style="{StaticResource WhiteMediumBold}"
+                Text="{Binding Username}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateProfileCommand}" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="2"
+                FontFamily="{StaticResource MaterialFontFamily}"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Text="{x:Static model:IconFont.ElectronFramework}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center" />
+        </Grid>
+    </NavigationPage.TitleView>
+
+
+    <Grid>
+        <CollectionView
+            ItemsSource="{Binding MyGroupChat}"
+            SelectedItem="{Binding GroupChatSelection}"
+            SelectionChangedCommand="{Binding NavigateGroupChatSelectionCommand}"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <components:GroupListTemplate />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <yummy:PancakeView
+            Margin="0,0,30,30"
+            BackgroundColor="{StaticResource LightGreen}"
+            CornerRadius="30"
+            Elevation="400"
+            HasShadow="True"
+            HeightRequest="60"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            WidthRequest="60">
+            <Label
+                FontFamily="{StaticResource MaterialFontFamily}"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Text="{x:Static model:IconFont.Plus}"
+                TextColor="{StaticResource White}"
+                VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateNewGroupChatPageCommand}" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </yummy:PancakeView>
+    </Grid>
+</ContentPage>

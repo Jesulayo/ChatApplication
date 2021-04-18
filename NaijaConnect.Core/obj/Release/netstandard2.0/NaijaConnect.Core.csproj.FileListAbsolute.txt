@@ -1,0 +1,9 @@
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\bin\Release\netstandard2.0\NaijaConnect.Core.deps.json
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\bin\Release\netstandard2.0\NaijaConnect.Core.dll
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\bin\Release\netstandard2.0\NaijaConnect.Core.pdb
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.csprojAssemblyReference.cache
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.AssemblyInfoInputs.cache
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.AssemblyInfo.cs
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.csproj.CoreCompileInputs.cache
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.dll
+C:\Users\JESULAYO\source\repos\NaijaConnect\NaijaConnect.Core\obj\Release\netstandard2.0\NaijaConnect.Core.pdb

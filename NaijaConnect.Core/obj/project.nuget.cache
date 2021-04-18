@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "V9Mdm5msOuhhAw/VcjTqDWt2dRNWxW8T3h23Ai4GwgGDlE+lCLM/8se3YFnx+A4Yl/yS9r9faZRfy5kqYiiDvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JESULAYO\\source\\repos\\NaijaConnect\\NaijaConnect.Core\\NaijaConnect.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JESULAYO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JESULAYO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
